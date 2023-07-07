@@ -48,7 +48,7 @@ public class PokerHand {
         if (cards.contains(14)) {
             cards.add(1);
         }
-        // сортируем и удаляем дубликаты в отсортированном списке, собираем значения в новый список
+        // сортируем и удаляем дубликаты в отсортированном списке
         List<Integer> distinct = cards.stream().sorted().distinct().collect(Collectors.toList());
 
         // находим разницу между 5-ю картами, если она равна 4, то straight.
@@ -63,6 +63,7 @@ public class PokerHand {
     /*
     Данное решение не найти в сети, поскольку его предложил один из моих учеников.
     Блестяще! Это умное решение данной задачи с минимальной алгоритмической сложностью.
+    Ученик отлично усвоил тему хеширования.
      */
     public boolean isStraight3(ArrayList<Integer> cards) {
         if (cards == null || cards.size() < 5) {
